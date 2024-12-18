@@ -1,0 +1,270 @@
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  font-size: 2em;
+  font-weight: bold;
+  color: wheat; /* 番茄紅色 */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.logo:hover {
+  animation: bounce 1s; /* 當滑鼠懸停時跳動得更快 */
+}
+
+.floating-text {
+  position: absolute;
+  font-size: 2em;
+  font-weight: 700;
+  color: #ffcc00; /* 金色 */
+  opacity: 0;
+  pointer-events: none;
+  animation: floatAnimation 5s infinite; /* 讓字眼不斷浮動 */
+}
+
+.navigation a{
+    font-size: 1.1em;
+    color: wheat;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 6px 15px ;
+    transition: .5s;
+}
+
+.navigation a:hover{
+    color: rgb(255, 123, 0);
+}
+
+.navigation a span {
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 20%;
+    z-index: -1;
+    transform: scale(0);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navigation a:hover span{
+    transform: scale(1);
+    opacity: 1;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(rgb(20, 19, 19),rgb(194, 189, 189));
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: url(../img/3d-rendering-dark-earth-space.jpg);
+}
+
+* {
+    box-sizing: border-box;
+  } 
+  /* Center website */
+  .main {
+    width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+    
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  .zoom-effect {
+    overflow: hidden;
+    /* 隐藏溢出内容 */
+}
+
+.zoom-effect img {
+    transition: transform 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+.zoom-effect:hover img {
+    transform: scale(1.1);
+    /* 滑过时放大1.1倍 */
+}
+.mg1 {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 270px;
+  margin-bottom: 20px;
+  border: 5px dotted wheat;
+}
+
+.mg2{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 180px;
+  border: 3px solid wheat;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.section1 {
+  padding: 100px;
+  display: flex;           
+  align-items: center;     
+  justify-content: flex-start;
+  position: relative;
+}
+
+h1 {
+  margin-left: 200px;        /* 標題與圖片之間的間距 */
+  color: wheat;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15vh;
+  color: wheat;
+  text-shadow: 2px 2px 5px black, 5px 5px 70px rgba(255, 255, 255, 0.5);
+}
+.h2{
+  color: azure;
+}
+
+.introduction-section {
+  color: wheat;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.introduction-box {
+  max-width: 1500px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.introduction-box h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #ffcc00; /* 金色 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.introduction-box p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: wheat;
+}
+
+.introduction-box:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.abc{
+    max-width: 1600px;
+    margin: auto;
+    
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* 限制影片最大寬度 */
+  margin: auto;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 比例 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
